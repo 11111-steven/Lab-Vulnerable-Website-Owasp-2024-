@@ -1,4 +1,5 @@
 **Explanatory Summary of Implemented Vulnerabilities**
+
 **1. A01: Broken Access Control**
 **What is it?** It is when a user can access data or functions that do not belong to them, such as viewing another user's profile.
 **How was it integrated? (profile.php)**
