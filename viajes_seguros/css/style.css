@@ -1,0 +1,1034 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    margin: 0;
+    color: #333;
+}
+
+.navbar {
+    background-color: #005f73;
+    padding: 1rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 95, 115, 0.2);
+    position: sticky;
+    top: 1rem;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #007f8d;
+    border-radius: 5px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 8rem auto 2rem auto; 
+    padding: 0 2rem;
+    background-color: white;
+    box-shadow: none;
+}
+
+h1, h2 {
+    color: #005f73;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #ee6c4d;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d64d2d;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.destinations-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.showcase-card-link {
+    text-decoration: none;
+}
+
+.showcase-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+}
+
+.showcase-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.showcase-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.showcase-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.card-title-overlay h4 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.hero-section {
+    position: relative;
+    width: 98.9vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -14rem; 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slideshow-effect 20s ease-in-out infinite;
+}
+
+.carousel-background img {
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    padding: 0 10rem;
+    max-width: 50%;
+    background-color: transparent;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-content label {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-content .form-group input {
+    color: #333;
+}
+
+@keyframes slideshow-effect {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(0%); }
+  33%  { transform: translateX(-25%); }
+  58%  { transform: translateX(-25%); }
+  66%  { transform: translateX(-50%); }
+  91%  { transform: translateX(-50%); }
+  100% { transform: translateX(-75%); }
+}
+
+.destination-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.destination-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.destination-info h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+
+.destination-info .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.purchase-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.purchase-section .price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005f73;
+}
+
+.purchase-section .btn-buy {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+} 
+
+.destination-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.destination-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.destination-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card .destination-card-info {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.destination-card .destination-card-info h3 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+.destination-card .destination-card-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.destination-card .price {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    color: #ee6c4d;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.destination-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.travel-type-badge {
+    background-color: #007f8d;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.section-title {
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.key-details {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.detail-item {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.destination-sidebar {
+    position: sticky;
+    top: 7rem;
+}
+
+.purchase-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    
+
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    gap: 0.5rem;            /* Añade un pequeño espacio entre elementos */
+
+}
+
+.purchase-box .price-tag {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.purchase-box .price-tag strong {
+    font-size: 2rem;
+    color: #005f73;
+    display: block;
+}
+
+.purchase-box .price-clarification {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.purchase-box .btn-buy {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+}
+
+.sidebar-contact {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.info-page-container {
+    padding: 1rem;
+}
+
+.info-page-container h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 3rem 0;
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+.value-card .icon {
+    font-size: 2rem;
+    color: #005f73;
+}
+
+.value-card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #005f73;
+}
+
+.team-member h3 {
+    margin: 0;
+}
+
+.team-member span {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h3, .contact-form h3 {
+    margin-top: 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.contact-info li strong {
+    margin-right: 0.5rem;
+}
+
+#message {
+    resize: vertical;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+
+.profile-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #005f73;
+    margin-bottom: 2rem;
+}
+
+.profile-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.profile-info-row:last-child {
+    border-bottom: none;
+}
+
+.profile-info-row strong {
+    color: #333;
+}
+
+.profile-info-row span {
+    color: #555;
+}
+
+.profile-info-row.sensitive {
+    background-color: #fff0f0;
+    border-color: #f5c6cb;
+    margin: 0 -2rem; /* Ocupa el padding del contenedor */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.profile-info-row .sensitive-data {
+    font-weight: bold;
+    color: #c51212;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Estilos para la página del dashboard --- */
+
+/* Estilo para el título de bienvenida */
+.container h2 {
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para los párrafos */
+.container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 2.5rem;
+}
+
+/* Estilo para el párrafo de subtítulo */
+.p1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 2.5rem;
+}
+
+/* Estilo para la lista de enlaces */
+.dashboard-links {
+    list-style: none; /* Quitamos los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ponemos los enlaces uno al lado del otro */
+    justify-content: center; /* Centramos los enlaces */
+    gap: 1.5rem; /* Espacio entre los enlaces */
+}
+
+.dashboard-links li a {
+    display: block;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #005f73;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.dashboard-links li a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    background-color: #e9f5f7;
+}
+
+/* --- Estilos para las tarjetas de viajes en el dashboard --- */
+
+.upcoming-trips {
+    margin-top: 2rem;
+}
+
+.trip-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre elementos */
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.trip-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.trip-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.trip-info {
+    flex-grow: 1; /* Empuja el botón hacia la derecha */
+}
+
+.trip-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #005f73;
+}
+
+.trip-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left; /* Asegura la alineación a la izquierda */
+}
+
+.no-trips-message {
+    text-align: center;
+    color: #777;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* --- Estilos para los botones de acción en la tarjeta de viaje --- */
+
+.trip-card-actions {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 0.5rem; /* Pequeño espacio entre los botones */
+}
+
+/* Hacemos que el botón de cancelar sea más pequeño */
+.trip-card-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-align: center; /* <<-- ESTA LÍNEA CENTRA EL TEXTO */
+}
+
+/* Estilo específico para el botón de cancelar */
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* --- Estilos para el Modal de Confirmación --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+}
+
+.modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 2001;
+    width: 90%;
+    max-width: 500px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Clase para ocultar el modal */
+.modal-overlay.hidden,
+.modal-box.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -60%); /* Efecto de "caída" al desaparecer */
+}
+.modal-overlay.hidden {
+    transform: none;
+}
+
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #005f73;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* --- Estilos para el Pie de Página (Footer) --- */
+
+.site-footer {
+    background-color: #005f73; /* Mismo color que la navbar para consistencia */
+    color: #a9d6e5; /* Un color de texto más suave que el blanco puro */
+    padding: 2.5rem 0;
+    margin-top: 4rem; /* Espacio superior para separarlo del contenido */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-section.about .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li a {
+    color: #a9d6e5;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: white;
+}
+
+.footer-section.contact-social span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.socials {
+    margin-top: 1rem;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #007f8d;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.socials a:hover {
+    background-color: #ee6c4d; /* Cambia al color de acento al pasar el ratón */
+}
+
+.socials a svg {
+    vertical-align: middle; /* Centra el ícono SVG verticalmente */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #007f8d; /* Línea separadora sutil */
+    font-size: 0.9rem;
+}
+
+/* --- Estilos para Páginas Legales (Términos, etc.) --- */
+
+.legal-page-container {
+    padding: 1rem;
+}
+
+.legal-page-container h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.legal-page-container .last-updated {
+    text-align: center;
+    color: #777;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.legal-content {
+    max-width: 800px; /* Ancho ideal para lectura */
+    margin: 0 auto;
+}
+
+.legal-content h2 {
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.legal-content p {
+    font-size: 1rem;
+    line-height: 1.7; /* Espaciado entre líneas para facilitar la lectura */
+    color: #444;
+}
+
+.legal-content ul {
+    padding-left: 20px; /* Indentación para la lista */
+}
+
+.legal-content ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Estilo para el precio pagado en la tarjeta del dashboard */
+.trip-info .paid-price {
+    font-weight: bold;
+    color: #007f8d; /* Un color azulado para que destaque */
+}
+
+/* --- Estilos para la Página de Confirmación de Compra --- */
+
+.confirmation-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.confirmation-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.confirmation-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ .summary-card {
+     display: grid;
+     grid-template-columns: 1fr 1.5fr;
+     max-width: 800px;
+     margin: 0 auto;
+     background-color: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 8px;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+     overflow: hidden;
+ }
+
+ .summary-image-container {
+     background-size: cover;      /* La imagen cubre todo el espacio */
+     background-position: center; /* La imagen se centra */
+     background-repeat: no-repeat;
+     min-height: 300px; /* Le damos una altura mínima para que se vea bien */
+ }
+
+.summary-details {
+    padding: 2rem;
+}
+
+.summary-details h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #555;
+    padding: 0.75rem 0;
+}
+
+.summary-row.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #005f73;
+    margin-top: 1rem;
+}
+
+.summary-note {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-details .btn-buy {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el enlace de "volver" en la página de confirmación */
+
+.go-back-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.go-back-link a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.go-back-link a:hover {
+    color: #005f73;
+    text-decoration: underline;
+}
